@@ -11,3 +11,8 @@ jobs:
         uses: grafana/k6-action@v0.3.1
         with:
           filename: example.js
+      - name: Publish Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        if: always()
+        with:
+          files: testresults.xml
