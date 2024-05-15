@@ -130,3 +130,5 @@ dist
 .pnp.*
 testresults.html
 testresults.xml
+chartreport.html
+metricsreport.html

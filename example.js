@@ -40,6 +40,6 @@ export function handleSummary(data) {
     return {
         stdout: textSummary(data, { indent: " ", enableColors: true }),
         'testresults.xml': jUnit(data), 
-        'testresults.html': htmlReport(data),
+        'metricsreport.html': htmlReport(data),
     };
   }

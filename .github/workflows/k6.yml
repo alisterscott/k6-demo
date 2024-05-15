@@ -14,6 +14,9 @@ jobs:
         uses: grafana/k6-action@v0.3.1
         with:
           filename: example.js
+        env:
+          K6_WEB_DASHBOARD: true
+          K6_WEB_DASHBOARD_EXPORT: "chartreport.html"
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
@@ -23,4 +26,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: html-metrics-report
-          path: testresults.html
+          path: metricsreport.html
+      - name: Publish HTML chart report
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-chart-report
+          path: chartreport.html
