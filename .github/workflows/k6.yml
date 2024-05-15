@@ -19,3 +19,8 @@ jobs:
         if: always()
         with:
           files: testresults.xml
+      - name: Publish HTML metrics report
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-metrics-report
+          path: testresults.html

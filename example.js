@@ -7,7 +7,7 @@ export const options = {
   discardResponseBodies: true,
 
   scenarios: {
-    contacts: {
+    getPosts: {
       executor: 'ramping-arrival-rate',
       startRate: 30,
       timeUnit: '1m',
